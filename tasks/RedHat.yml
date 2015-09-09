@@ -6,7 +6,7 @@
   yum: name={{ epel_repo }} state=present
 
 - name: Install os packages
-  yum: name={{item}} state=present
+  yum: name={{item}} state=present update_cache=yes
   with_items:
     - wget
     - curl
